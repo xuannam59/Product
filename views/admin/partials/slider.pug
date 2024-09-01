@@ -1,0 +1,22 @@
+.sider
+  .inner-menu 
+    ul
+      li
+        a(href=`${prefitAdmin}/dashboard`) Tổng quang
+      if(role.permissions.includes("products-category_view"))
+        li
+          a(href=`${prefitAdmin}/products-category`) Danh mục sản phẩm 
+      if(role.permissions.includes("products_view"))
+        li
+          a(href=`${prefitAdmin}/products`) Danh sách sản phẩm
+      if(role.permissions.includes("roles_view"))
+        li 
+          a(href=`${prefitAdmin}/roles`) Nhóm quyền
+      if(role.permissions.includes("roles_permission"))
+        li 
+          a(href=`${prefitAdmin}/roles/premissions`) Phân quyền
+      if(role.permissions.includes("accounts_view"))
+        li 
+          a(href=`${prefitAdmin}/accounts`) Danh sách tài khoản
+      li 
+          a(href=`${prefitAdmin}/settings/general`) Cài đặt chung
